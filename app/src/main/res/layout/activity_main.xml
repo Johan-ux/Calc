@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".MainActivity">
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="312dp"
+        android:layout_height="501dp"
+        android:layout_marginEnd="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/b1"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="105dp"
+            android:layout_height="100dp"
+            android:text="@string/limpiar" />
+
+        <Button
+            android:id="@+id/b2"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="105dp"
+            android:layout_height="100dp"
+            android:text="@string/division" />
+
+        <Button
+            android:id="@+id/b3"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="105dp"
+            android:layout_height="100dp"
+            android:text="@string/multiplicacion" />
+
+        <Button
+            android:id="@+id/b4"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="105dp"
+            android:layout_height="100dp"
+            android:text="@string/n7"
+            app:layout_column="0"
+            app:layout_row="1" />
+
+        <Button
+            android:id="@+id/b5"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="105dp"
+            android:layout_height="100dp"
+            android:text="@string/n8"
+            app:layout_column="1"
+            app:layout_row="1" />
+
+        <Button
+            android:id="@+id/b6"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="105dp"
+            android:layout_height="100dp"
+            android:text="@string/n9"
+            app:layout_column="2"
+            app:layout_row="1" />
+
+        <Button
+            android:id="@+id/b7"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="105dp"
+            android:layout_height="100dp"
+            android:text="@string/n5"
+            app:layout_column="1"
+            app:layout_row="2" />
+
+        <Button
+            android:id="@+id/b8"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="105dp"
+            android:layout_height="100dp"
+            android:text="@string/n6"
+            app:layout_column="2"
+            app:layout_row="2" />
+
+        <Button
+            android:id="@+id/b9"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="105dp"
+            android:layout_height="100dp"
+            android:text="@string/n2"
+            app:layout_column="1"
+            app:layout_row="3" />
+
+        <Button
+            android:id="@+id/b10"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="105dp"
+            android:layout_height="100dp"
+            android:text="@string/n3"
+            app:layout_column="2"
+            app:layout_row="3" />
+
+        <Button
+            android:id="@+id/b11"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="105dp"
+            android:layout_height="100dp"
+            android:text="@string/n0"
+            app:layout_column="1"
+            app:layout_row="4" />
+
+        <Button
+            android:id="@+id/b12"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="105dp"
+            android:layout_height="100dp"
+            android:text="@string/coma"
+            app:layout_column="2"
+            app:layout_row="4" />
+
+        <Button
+            android:id="@+id/b13"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="105dp"
+            android:layout_height="100dp"
+            android:text="@string/n4"
+            app:layout_column="0"
+            app:layout_row="2" />
+
+        <Button
+            android:id="@+id/b14"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="105dp"
+            android:layout_height="100dp"
+            android:text="@string/n1"
+            app:layout_column="0"
+            app:layout_row="3" />
+
+        <Button
+            android:id="@+id/b15"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="105dp"
+            android:layout_height="100dp"
+            android:text="@string/porcentaje"
+            app:layout_column="0"
+            app:layout_row="4" />
+
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="99dp"
+        android:layout_height="501dp"
+        android:layout_marginStart="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gridLayout">
+
+        <Button
+            android:id="@+id/b19"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="98dp"
+            android:layout_height="200dp"
+            android:text="@string/igual"
+            app:layout_column="0"
+            app:layout_row="3" />
+
+        <Button
+            android:id="@+id/b16"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="98dp"
+            android:layout_height="100dp"
+            android:text="@string/borrar"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+        <Button
+            android:id="@+id/b17"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="98dp"
+            android:layout_height="100dp"
+            android:text="@string/resta"
+            app:layout_column="0"
+            app:layout_row="1" />
+
+        <Button
+            android:id="@+id/b18"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="98dp"
+            android:layout_height="100dp"
+            android:text="@string/sumar"
+            app:layout_column="0"
+            app:layout_row="2" />
+    </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="408dp"
+        android:layout_height="89dp"
+        android:textAlignment="viewEnd"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="406dp"
+        android:layout_height="78dp"
+        android:textAlignment="viewEnd"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv1" />
+</androidx.constraintlayout.widget.ConstraintLayout>

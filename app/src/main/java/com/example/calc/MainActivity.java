@@ -3,6 +3,7 @@ package com.example.calc;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -146,6 +147,7 @@ public class MainActivity extends AppCompatActivity {
         b17.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+
                 operacion1 = tv1.getText().toString();
                 operario = "-";
 
@@ -190,28 +192,38 @@ public class MainActivity extends AppCompatActivity {
         b12.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                operacion2 = tv1.getText().toString();
-                operacion2 = operacion2 + ".";
-                tv1.setText(operacion2);
+                if(tv1.getText().toString().length() == 0){
+                    tv1.setText("0.");
+                }
+                if(!tv1.getText().toString().contains(".")){
+                    operacion2 = tv1.getText().toString();
+                    operacion2 = operacion2 + ".";
+                    tv1.setText(operacion2);
+                }
             }
         });
 
         b16.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                operacion2 = tv1.getText().toString();
-                operacion2 = operacion2.substring(0,operacion2.length()-1);
-                tv1.setText(operacion2);
+
+                if(tv1.getText().toString().length() == 0){
+                    tv1.setText(operacion2);
+                }else{
+                    operacion2 = tv1.getText().toString();
+                    operacion2 = operacion2.substring(0,operacion2.length()-1);
+                    tv1.setText(operacion2);
+                }
             }
         });
 
         b1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                operacion1 = tv1.getText().toString();
                 operacion1 = "";
                 operacion2 = "";
                 operario = "";
+                resultado = 0;
 
                 tv1.setText(operacion1);
                 tv2.setText("");
@@ -240,10 +252,12 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 if(operario.equals("%")){
+
                     resultado = Double.parseDouble(operacion1)  % Double.parseDouble(operacion2);
 
                 }
-                tv2.setText(String.valueOf(resultado));
+                tv1.setText(String.valueOf(resultado));
+                tv2.setText(operacion1 + operario + operacion2 + " = ");
             }
         });
     }

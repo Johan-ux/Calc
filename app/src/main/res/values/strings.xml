@@ -15,7 +15,7 @@
     <string name="multiplicacion">*</string>
     <string name="division">/</string>
     <string name="coma">,</string>
-    <string name="borrar">x</string>
+    <string name="borrar">R</string>
     <string name="limpiar">C</string>
     <string name="porcentaje">%</string>
     <string name="igual">=</string>

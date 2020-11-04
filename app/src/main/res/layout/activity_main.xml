@@ -37,8 +37,9 @@
             style="@style/Widget.AppCompat.Button"
             android:layout_width="105dp"
             android:layout_height="100dp"
-            android:textSize="18sp"
-            android:text="@string/multiplicacion" />
+            android:text="@string/multiplicacion"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/b4"
@@ -166,7 +167,7 @@
     <androidx.gridlayout.widget.GridLayout
         android:layout_width="99dp"
         android:layout_height="501dp"
-        android:layout_marginStart="2dp"
+        android:layout_marginStart="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/gridLayout">

@@ -12,10 +12,10 @@
     <string name="n0">0</string>
     <string name="sumar">+</string>
     <string name="resta">-</string>
-    <string name="multiplicacion">*</string>
-    <string name="division">/</string>
+    <string name="multiplicacion">x</string>
+    <string name="division">÷</string>
     <string name="coma">,</string>
-    <string name="borrar">R</string>
+    <string name="borrar">«</string>
     <string name="limpiar">C</string>
     <string name="porcentaje">%</string>
     <string name="igual">=</string>

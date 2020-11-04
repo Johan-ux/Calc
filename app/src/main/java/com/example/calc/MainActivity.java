@@ -3,8 +3,6 @@ package com.example.calc;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -43,222 +41,163 @@ public class MainActivity extends AppCompatActivity {
         Button b18 = findViewById(R.id.b18);
         Button b19 = findViewById(R.id.b19);
 
-        b14.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
+        b14.setOnClickListener(v -> {
+            operacion2 = tv1.getText().toString();
+            operacion2 = operacion2 + "1";
+            tv1.setText(operacion2);
+        });
+
+        b9.setOnClickListener(v -> {
+            operacion2 = tv1.getText().toString();
+            operacion2 = operacion2 + "2";
+            tv1.setText(operacion2);
+        });
+
+        b10.setOnClickListener(v -> {
+            operacion2 = tv1.getText().toString();
+            operacion2 = operacion2 + "3";
+            tv1.setText(operacion2);
+        });
+
+        b13.setOnClickListener(v -> {
+            operacion2 = tv1.getText().toString();
+            operacion2 = operacion2 + "4";
+            tv1.setText(operacion2);
+        });
+
+        b7.setOnClickListener(v -> {
+            operacion2 = tv1.getText().toString();
+            operacion2 = operacion2 + "5";
+            tv1.setText(operacion2);
+        });
+
+        b8.setOnClickListener(v -> {
+            operacion2 = tv1.getText().toString();
+            operacion2 = operacion2 + "6";
+            tv1.setText(operacion2);
+        });
+
+        b4.setOnClickListener(v -> {
+            operacion2 = tv1.getText().toString();
+            operacion2 = operacion2 + "7";
+            tv1.setText(operacion2);
+        });
+
+        b5.setOnClickListener(v -> {
+            operacion2 = tv1.getText().toString();
+            operacion2 = operacion2 + "8";
+            tv1.setText(operacion2);
+        });
+
+        b6.setOnClickListener(v -> {
+            operacion2 = tv1.getText().toString();
+            operacion2 = operacion2 + "9";
+            tv1.setText(operacion2);
+        });
+
+        b11.setOnClickListener(v -> {
+            operacion2 = tv1.getText().toString();
+            operacion2 = operacion2 + "0";
+            tv1.setText(operacion2);
+        });
+
+        b18.setOnClickListener(v -> {
+            operacion1 = tv1.getText().toString();
+            operario = "+";
+
+            tv1.setText("");
+            tv2.setText(operacion2.concat("+"));
+        });
+
+        b17.setOnClickListener(v -> {
+
+            operacion1 = tv1.getText().toString();
+            operario = "-";
+
+            tv1.setText("");
+            tv2.setText(operacion2.concat("-"));
+        });
+
+        b3.setOnClickListener(v -> {
+            operacion1 = tv1.getText().toString();
+            operario = "*";
+
+            tv1.setText("");
+            tv2.setText(operacion2.concat("*"));
+        });
+
+        b2.setOnClickListener(v -> {
+            operacion1 = tv1.getText().toString();
+            operario = "/";
+
+            tv1.setText("");
+            tv2.setText(operacion2.concat("/"));
+        });
+
+        b15.setOnClickListener(v -> {
+            operacion1 = tv1.getText().toString();
+            operario = "%";
+
+            tv1.setText("");
+            tv2.setText(operacion2.concat("%"));
+        });
+
+        b12.setOnClickListener(v -> {
+            if(tv1.getText().toString().length() == 0){
+                tv1.setText("0.");
+            }
+            if(!tv1.getText().toString().contains(".")){
                 operacion2 = tv1.getText().toString();
-                operacion2 = operacion2 + "1";
+                operacion2 = operacion2 + ".";
                 tv1.setText(operacion2);
             }
         });
 
-        b9.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
+        b16.setOnClickListener(v -> {
+
+            if(tv1.getText().toString().length() != 0){
                 operacion2 = tv1.getText().toString();
-                operacion2 = operacion2 + "2";
+                operacion2 = operacion2.substring(0,operacion2.length()-1);
                 tv1.setText(operacion2);
             }
         });
 
-        b10.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                operacion2 = tv1.getText().toString();
-                operacion2 = operacion2 + "3";
-                tv1.setText(operacion2);
-            }
-        });
-        b13.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                operacion2 = tv1.getText().toString();
-                operacion2 = operacion2 + "4";
-                tv1.setText(operacion2);
-            }
+        b1.setOnClickListener(v -> {
+            operacion1 = "";
+            operacion2 = "";
+            operario = "";
+            resultado = 0;
+
+            tv1.setText(operacion1);
+            tv2.setText("");
         });
 
-        b7.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                operacion2 = tv1.getText().toString();
-                operacion2 = operacion2 + "5";
-                tv1.setText(operacion2);
+        b19.setOnClickListener(v -> {
+
+
+            if(operario.equals("+")){
+                resultado = Double.parseDouble(operacion1)  + Double.parseDouble(operacion2);
+
             }
-        });
+            if(operario.equals("-")){
+                resultado = Double.parseDouble(operacion1)  - Double.parseDouble(operacion2);
 
-        b8.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                operacion2 = tv1.getText().toString();
-                operacion2 = operacion2 + "6";
-                tv1.setText(operacion2);
             }
-        });
+            if(operario.equals("*")){
+                resultado = Double.parseDouble(operacion1)  * Double.parseDouble(operacion2);
 
-        b4.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                operacion2 = tv1.getText().toString();
-                operacion2 = operacion2 + "7";
-                tv1.setText(operacion2);
             }
-        });
+            if(operario.equals("/")){
+                resultado = Double.parseDouble(operacion1)  / Double.parseDouble(operacion2);
 
-        b5.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                operacion2 = tv1.getText().toString();
-                operacion2 = operacion2 + "8";
-                tv1.setText(operacion2);
             }
-        });
+            if(operario.equals("%")){
 
-        b6.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                operacion2 = tv1.getText().toString();
-                operacion2 = operacion2 + "9";
-                tv1.setText(operacion2);
+                resultado = Double.parseDouble(operacion1)  % Double.parseDouble(operacion2);
+
             }
-        });
-
-        b11.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                operacion2 = tv1.getText().toString();
-                operacion2 = operacion2 + "0";
-                tv1.setText(operacion2);
-            }
-        });
-
-        b18.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-
-                operacion1 = tv1.getText().toString();
-                operario = "+";
-
-                tv1.setText("");
-                tv2.setText(operacion2 + "+");
-            }
-        });
-
-        b17.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-
-                operacion1 = tv1.getText().toString();
-                operario = "-";
-
-                tv1.setText("");
-                tv2.setText(operacion2 + "-");
-            }
-        });
-
-        b3.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                operacion1 = tv1.getText().toString();
-                operario = "*";
-
-                tv1.setText("");
-                tv2.setText(operacion2 + "*");
-            }
-        });
-
-        b2.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                operacion1 = tv1.getText().toString();
-                operario = "/";
-
-                tv1.setText("");
-                tv2.setText(operacion2 + "/");
-            }
-        });
-
-        b15.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                operacion1 = tv1.getText().toString();
-                operario = "%";
-
-                tv1.setText("");
-                tv2.setText(operacion2 + "%");
-            }
-        });
-
-        b12.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                if(tv1.getText().toString().length() == 0){
-                    tv1.setText("0.");
-                }
-                if(!tv1.getText().toString().contains(".")){
-                    operacion2 = tv1.getText().toString();
-                    operacion2 = operacion2 + ".";
-                    tv1.setText(operacion2);
-                }
-            }
-        });
-
-        b16.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-
-                if(tv1.getText().toString().length() == 0){
-                    tv1.setText(operacion2);
-                }else{
-                    operacion2 = tv1.getText().toString();
-                    operacion2 = operacion2.substring(0,operacion2.length()-1);
-                    tv1.setText(operacion2);
-                }
-            }
-        });
-
-        b1.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                operacion1 = "";
-                operacion2 = "";
-                operario = "";
-                resultado = 0;
-
-                tv1.setText(operacion1);
-                tv2.setText("");
-            }
-        });
-
-        b19.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-
-
-                if(operario.equals("+")){
-                    resultado = Double.parseDouble(operacion1)  + Double.parseDouble(operacion2);
-
-                }
-                if(operario.equals("-")){
-                    resultado = Double.parseDouble(operacion1)  - Double.parseDouble(operacion2);
-
-                }
-                if(operario.equals("*")){
-                    resultado = Double.parseDouble(operacion1)  * Double.parseDouble(operacion2);
-
-                }
-                if(operario.equals("/")){
-                    resultado = Double.parseDouble(operacion1)  / Double.parseDouble(operacion2);
-
-                }
-                if(operario.equals("%")){
-
-                    resultado = Double.parseDouble(operacion1)  % Double.parseDouble(operacion2);
-
-                }
-                tv1.setText(String.valueOf(resultado));
-                tv2.setText(operacion1 + operario + operacion2 + " = ");
-            }
+            tv1.setText(String.valueOf(resultado));
+            tv2.setText(operacion1.concat(operario).concat(operacion2).concat(" = "));
         });
     }
 }

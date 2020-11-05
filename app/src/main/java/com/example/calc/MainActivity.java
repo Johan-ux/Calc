@@ -178,32 +178,32 @@ public class MainActivity extends AppCompatActivity {
         });
 
         b19.setOnClickListener(v -> {
-
-            if(operario.equals("+")){
-
-                if(operacion1.length() == 0){
-                    resultado = 0;
+            if(tv1.getText().toString().length() == 0 || tv2.getText().toString().length() == 0){
+                String error = "Error";
+                tv2.setText(error);
+            }else{
+                if(operario.equals("+")){
+                    resultado = Float.parseFloat(operacion1)  + Float.parseFloat(operacion2);
+                    tv2.setText(operacion1.concat(" + ").concat(operacion2).concat(" = "));
                 }
-                resultado = Float.parseFloat(operacion1)  + Float.parseFloat(operacion2);
-                tv2.setText(operacion1.concat(" + ").concat(operacion2).concat(" = "));
+                if(operario.equals("-")){
+                    resultado = Float.parseFloat(operacion1)  - Float.parseFloat(operacion2);
+                    tv2.setText(operacion1.concat(" - ").concat(operacion2).concat(" = "));
+                }
+                if(operario.equals("*")){
+                    resultado = Float.parseFloat(operacion1)  * Float.parseFloat(operacion2);
+                    tv2.setText(operacion1.concat(" x ").concat(operacion2).concat(" = "));
+                }
+                if(operario.equals("/")){
+                    resultado = Float.parseFloat(operacion1)  / Float.parseFloat(operacion2);
+                    tv2.setText(operacion1.concat(" ÷ ").concat(operacion2).concat(" = "));
+                }
+                if(operario.equals("%")){
+                    resultado = (Float.parseFloat(operacion1)  * Float.parseFloat(operacion2) / 100);
+                    tv2.setText(operacion1.concat(" % ").concat(operacion2).concat(" = "));
+                }
+                tv1.setText(String.valueOf(resultado));
             }
-            if(operario.equals("-")){
-                resultado = Float.parseFloat(operacion1)  - Float.parseFloat(operacion2);
-                tv2.setText(operacion1.concat(" - ").concat(operacion2).concat(" = "));
-            }
-            if(operario.equals("*")){
-                resultado = Float.parseFloat(operacion1)  * Float.parseFloat(operacion2);
-                tv2.setText(operacion1.concat(" x ").concat(operacion2).concat(" = "));
-            }
-            if(operario.equals("/")){
-                resultado = Float.parseFloat(operacion1)  / Float.parseFloat(operacion2);
-                tv2.setText(operacion1.concat(" ÷ ").concat(operacion2).concat(" = "));
-            }
-            if(operario.equals("%")){
-                resultado = (Float.parseFloat(operacion1)  * Float.parseFloat(operacion2) / 100);
-                tv2.setText(operacion1.concat(" % ").concat(operacion2).concat(" = "));
-            }
-            tv1.setText(String.valueOf(resultado));
         });
     }
 }

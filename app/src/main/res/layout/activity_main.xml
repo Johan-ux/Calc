@@ -9,17 +9,17 @@
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/gridLayout"
-        android:layout_width="312dp"
-        android:layout_height="501dp"
-        android:layout_marginEnd="100dp"
+        android:layout_width="302dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="108dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv1">
 
         <Button
             android:id="@+id/b1"
             style="@style/Widget.AppCompat.Button"
-            android:layout_width="105dp"
+            android:layout_width="100dp"
             android:layout_height="100dp"
             android:text="@string/limpiar"
             android:textSize="18sp" />
@@ -27,15 +27,15 @@
         <Button
             android:id="@+id/b2"
             style="@style/Widget.AppCompat.Button"
-            android:layout_width="105dp"
+            android:layout_width="100dp"
             android:layout_height="100dp"
-            android:textSize="18sp"
-            android:text="@string/division" />
+            android:text="@string/division"
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/b3"
             style="@style/Widget.AppCompat.Button"
-            android:layout_width="105dp"
+            android:layout_width="100dp"
             android:layout_height="100dp"
             android:text="@string/multiplicacion"
             android:textAllCaps="false"
@@ -44,120 +44,120 @@
         <Button
             android:id="@+id/b4"
             style="@style/Widget.AppCompat.Button"
-            android:layout_width="105dp"
+            android:layout_width="100dp"
             android:layout_height="100dp"
-            android:textSize="18sp"
             android:text="@string/n7"
+            android:textSize="18sp"
             app:layout_column="0"
             app:layout_row="1" />
 
         <Button
             android:id="@+id/b5"
             style="@style/Widget.AppCompat.Button"
-            android:layout_width="105dp"
+            android:layout_width="100dp"
             android:layout_height="100dp"
-            android:textSize="18sp"
             android:text="@string/n8"
+            android:textSize="18sp"
             app:layout_column="1"
             app:layout_row="1" />
 
         <Button
             android:id="@+id/b6"
             style="@style/Widget.AppCompat.Button"
-            android:layout_width="105dp"
+            android:layout_width="100dp"
             android:layout_height="100dp"
-            android:textSize="18sp"
             android:text="@string/n9"
+            android:textSize="18sp"
             app:layout_column="2"
             app:layout_row="1" />
 
         <Button
             android:id="@+id/b7"
             style="@style/Widget.AppCompat.Button"
-            android:layout_width="105dp"
+            android:layout_width="100dp"
             android:layout_height="100dp"
-            android:textSize="18sp"
             android:text="@string/n5"
+            android:textSize="18sp"
             app:layout_column="1"
             app:layout_row="2" />
 
         <Button
             android:id="@+id/b8"
             style="@style/Widget.AppCompat.Button"
-            android:layout_width="105dp"
+            android:layout_width="100dp"
             android:layout_height="100dp"
-            android:textSize="18sp"
             android:text="@string/n6"
+            android:textSize="18sp"
             app:layout_column="2"
             app:layout_row="2" />
 
         <Button
             android:id="@+id/b9"
             style="@style/Widget.AppCompat.Button"
-            android:layout_width="105dp"
+            android:layout_width="100dp"
             android:layout_height="100dp"
-            android:textSize="18sp"
             android:text="@string/n2"
+            android:textSize="18sp"
             app:layout_column="1"
             app:layout_row="3" />
 
         <Button
             android:id="@+id/b10"
             style="@style/Widget.AppCompat.Button"
-            android:layout_width="105dp"
+            android:layout_width="100dp"
             android:layout_height="100dp"
-            android:textSize="18sp"
             android:text="@string/n3"
+            android:textSize="18sp"
             app:layout_column="2"
             app:layout_row="3" />
 
         <Button
             android:id="@+id/b11"
             style="@style/Widget.AppCompat.Button"
-            android:layout_width="105dp"
+            android:layout_width="100dp"
             android:layout_height="100dp"
-            android:textSize="18sp"
             android:text="@string/n0"
+            android:textSize="18sp"
             app:layout_column="1"
             app:layout_row="4" />
 
         <Button
             android:id="@+id/b12"
             style="@style/Widget.AppCompat.Button"
-            android:layout_width="105dp"
+            android:layout_width="100dp"
             android:layout_height="100dp"
-            android:textSize="18sp"
             android:text="@string/coma"
+            android:textSize="18sp"
             app:layout_column="2"
             app:layout_row="4" />
 
         <Button
             android:id="@+id/b13"
             style="@style/Widget.AppCompat.Button"
-            android:layout_width="105dp"
+            android:layout_width="100dp"
             android:layout_height="100dp"
-            android:textSize="18sp"
             android:text="@string/n4"
+            android:textSize="18sp"
             app:layout_column="0"
             app:layout_row="2" />
 
         <Button
             android:id="@+id/b14"
             style="@style/Widget.AppCompat.Button"
-            android:layout_width="105dp"
+            android:layout_width="100dp"
             android:layout_height="100dp"
-            android:textSize="18sp"
             android:text="@string/n1"
+            android:textSize="18sp"
             app:layout_column="0"
             app:layout_row="3" />
 
         <Button
             android:id="@+id/b15"
             style="@style/Widget.AppCompat.Button"
-            android:layout_width="105dp"
+            android:layout_width="100dp"
             android:layout_height="100dp"
-            android:textSize="18sp"
             android:text="@string/porcentaje"
+            android:textSize="18sp"
             app:layout_column="0"
             app:layout_row="4" />
 
@@ -165,17 +165,17 @@
     </androidx.gridlayout.widget.GridLayout>
 
     <androidx.gridlayout.widget.GridLayout
-        android:layout_width="99dp"
+        android:layout_width="104dp"
         android:layout_height="501dp"
-        android:layout_marginStart="5dp"
+        android:layout_marginTop="108dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/gridLayout">
+        app:layout_constraintStart_toEndOf="@+id/gridLayout"
+        app:layout_constraintTop_toBottomOf="@+id/tv1">
 
         <Button
             android:id="@+id/b19"
             style="@style/Widget.AppCompat.Button"
-            android:layout_width="98dp"
+            android:layout_width="100dp"
             android:layout_height="200dp"
             android:text="@string/igual"
             android:textSize="18sp"
@@ -185,7 +185,7 @@
         <Button
             android:id="@+id/b16"
             style="@style/Widget.AppCompat.Button"
-            android:layout_width="98dp"
+            android:layout_width="100dp"
             android:layout_height="100dp"
             android:text="@string/borrar"
             android:textSize="18sp"
@@ -195,7 +195,7 @@
         <Button
             android:id="@+id/b17"
             style="@style/Widget.AppCompat.Button"
-            android:layout_width="98dp"
+            android:layout_width="100dp"
             android:layout_height="100dp"
             android:text="@string/resta"
             android:textSize="18sp"
@@ -205,7 +205,7 @@
         <Button
             android:id="@+id/b18"
             style="@style/Widget.AppCompat.Button"
-            android:layout_width="98dp"
+            android:layout_width="100dp"
             android:layout_height="100dp"
             android:text="@string/sumar"
             android:textSize="18sp"

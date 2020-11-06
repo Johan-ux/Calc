@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private String operacion1;
     private String operacion2;
     private String operario;
-    private float resultado;
+    private Double resultado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -108,14 +108,22 @@ public class MainActivity extends AppCompatActivity {
                 operario = "+";
                 tv1.setText("");
                 tv2.setText(operacion2.concat(" + "));
+                if(resultado != null){
+                    tv2.setText(String.valueOf(resultado).concat(" + "));
+                }
             }
         });
 
         b17.setOnClickListener(v -> {
-            operacion1 = tv1.getText().toString();
-            operario = "-";
-            tv1.setText("");
-            tv2.setText(operacion2.concat(" - "));
+           if(tv1.getText().toString().length() != 0){
+                operacion1 = tv1.getText().toString();
+                operario = "-";
+                tv1.setText("");
+                tv2.setText(operacion2.concat(" - "));
+               if(resultado != null){
+                   tv2.setText(String.valueOf(resultado).concat(" - "));
+               }
+            }
         });
 
         b3.setOnClickListener(v -> {
@@ -125,6 +133,9 @@ public class MainActivity extends AppCompatActivity {
 
                 tv1.setText("");
                 tv2.setText(operacion2.concat(" x "));
+                if(resultado != null){
+                    tv2.setText(String.valueOf(resultado).concat(" x "));
+                }
             }
         });
 
@@ -135,6 +146,9 @@ public class MainActivity extends AppCompatActivity {
 
                 tv1.setText("");
                 tv2.setText(operacion2.concat(" ÷ "));
+                if(resultado != null){
+                    tv2.setText(String.valueOf(resultado).concat(" ÷ "));
+                }
             }
         });
 
@@ -145,6 +159,9 @@ public class MainActivity extends AppCompatActivity {
 
                 tv1.setText("");
                 tv2.setText(operacion2.concat(" % "));
+                if(resultado != null){
+                    tv2.setText(String.valueOf(resultado).concat(" % "));
+                }
             }
         });
 
@@ -171,7 +188,7 @@ public class MainActivity extends AppCompatActivity {
             operacion1 = "";
             operacion2 = "";
             operario = "";
-            resultado = 0;
+            resultado = null;
 
             tv1.setText("");
             tv2.setText("");
@@ -183,23 +200,23 @@ public class MainActivity extends AppCompatActivity {
                 tv2.setText(error);
             }else{
                 if(operario.equals("+")){
-                    resultado = Float.parseFloat(operacion1)  + Float.parseFloat(operacion2);
+                    resultado = Double.parseDouble(operacion1)  + Double.parseDouble(operacion2);
                     tv2.setText(operacion1.concat(" + ").concat(operacion2).concat(" = "));
                 }
                 if(operario.equals("-")){
-                    resultado = Float.parseFloat(operacion1)  - Float.parseFloat(operacion2);
+                    resultado = Double.parseDouble(operacion1)  - Double.parseDouble(operacion2);
                     tv2.setText(operacion1.concat(" - ").concat(operacion2).concat(" = "));
                 }
                 if(operario.equals("*")){
-                    resultado = Float.parseFloat(operacion1)  * Float.parseFloat(operacion2);
+                    resultado = Double.parseDouble(operacion1)  * Double.parseDouble(operacion2);
                     tv2.setText(operacion1.concat(" x ").concat(operacion2).concat(" = "));
                 }
                 if(operario.equals("/")){
-                    resultado = Float.parseFloat(operacion1)  / Float.parseFloat(operacion2);
+                    resultado = Double.parseDouble(operacion1)  / Double.parseDouble(operacion2);
                     tv2.setText(operacion1.concat(" ÷ ").concat(operacion2).concat(" = "));
                 }
                 if(operario.equals("%")){
-                    resultado = (Float.parseFloat(operacion1)  * Float.parseFloat(operacion2) / 100);
+                    resultado = (Double.parseDouble(operacion1)  * Double.parseDouble(operacion2) / 100);
                     tv2.setText(operacion1.concat(" % ").concat(operacion2).concat(" = "));
                 }
                 tv1.setText(String.valueOf(resultado));

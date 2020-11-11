@@ -14,6 +14,8 @@ public class MainActivity extends AppCompatActivity {
     private String operacion2;
     private String operario;
     private Double resultado;
+    private boolean presionado;
+    private boolean presionadoOp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,60 +45,100 @@ public class MainActivity extends AppCompatActivity {
         Button b19 = findViewById(R.id.b19);
 
         b14.setOnClickListener(v -> {
+            if(presionado && !presionadoOp){
+                b1.callOnClick();
+                presionado = false;
+            }
             operacion2 = tv1.getText().toString();
             operacion2 = operacion2 + "1";
             tv1.setText(operacion2);
         });
 
         b9.setOnClickListener(v -> {
+            if(presionado && !presionadoOp){
+                b1.callOnClick();
+                presionado = false;
+            }
             operacion2 = tv1.getText().toString();
             operacion2 = operacion2 + "2";
             tv1.setText(operacion2);
         });
 
         b10.setOnClickListener(v -> {
+            if(presionado && !presionadoOp){
+                b1.callOnClick();
+                presionado = false;
+            }
             operacion2 = tv1.getText().toString();
             operacion2 = operacion2 + "3";
             tv1.setText(operacion2);
         });
 
         b13.setOnClickListener(v -> {
+            if(presionado && !presionadoOp){
+                b1.callOnClick();
+                presionado = false;
+            }
             operacion2 = tv1.getText().toString();
             operacion2 = operacion2 + "4";
             tv1.setText(operacion2);
         });
 
         b7.setOnClickListener(v -> {
+            if(presionado && !presionadoOp){
+                b1.callOnClick();
+                presionado = false;
+            }
             operacion2 = tv1.getText().toString();
             operacion2 = operacion2 + "5";
             tv1.setText(operacion2);
         });
 
         b8.setOnClickListener(v -> {
+            if(presionado && !presionadoOp){
+                b1.callOnClick();
+                presionado = false;
+            }
             operacion2 = tv1.getText().toString();
             operacion2 = operacion2 + "6";
             tv1.setText(operacion2);
         });
 
         b4.setOnClickListener(v -> {
+            if(presionado && !presionadoOp){
+                b1.callOnClick();
+                presionado = false;
+            }
             operacion2 = tv1.getText().toString();
             operacion2 = operacion2 + "7";
             tv1.setText(operacion2);
         });
 
         b5.setOnClickListener(v -> {
+            if(presionado && !presionadoOp){
+                b1.callOnClick();
+                presionado = false;
+            }
             operacion2 = tv1.getText().toString();
             operacion2 = operacion2 + "8";
             tv1.setText(operacion2);
         });
 
         b6.setOnClickListener(v -> {
+            if(presionado && !presionadoOp){
+                b1.callOnClick();
+                presionado = false;
+            }
             operacion2 = tv1.getText().toString();
             operacion2 = operacion2 + "9";
             tv1.setText(operacion2);
         });
 
         b11.setOnClickListener(v -> {
+            if(presionado && !presionadoOp){
+                b1.callOnClick();
+                presionado = false;
+            }
             operacion2 = tv1.getText().toString();
             operacion2 = operacion2 + "0";
             tv1.setText(operacion2);
@@ -104,6 +146,7 @@ public class MainActivity extends AppCompatActivity {
 
         b18.setOnClickListener(v -> {
             if(tv1.getText().toString().length() != 0){
+                presionadoOp = true;
                 operacion1 = tv1.getText().toString();
                 operario = "+";
                 tv1.setText("");
@@ -116,6 +159,7 @@ public class MainActivity extends AppCompatActivity {
 
         b17.setOnClickListener(v -> {
            if(tv1.getText().toString().length() != 0){
+                presionadoOp = true;
                 operacion1 = tv1.getText().toString();
                 operario = "-";
                 tv1.setText("");
@@ -128,6 +172,7 @@ public class MainActivity extends AppCompatActivity {
 
         b3.setOnClickListener(v -> {
             if(tv1.getText().toString().length() != 0){
+                presionadoOp = true;
                 operacion1 = tv1.getText().toString();
                 operario = "*";
 
@@ -141,6 +186,7 @@ public class MainActivity extends AppCompatActivity {
 
         b2.setOnClickListener(v -> {
             if(tv1.getText().toString().length() != 0){
+                presionadoOp = true;
                 operacion1 = tv1.getText().toString();
                 operario = "/";
 
@@ -154,6 +200,7 @@ public class MainActivity extends AppCompatActivity {
 
         b15.setOnClickListener(v -> {
             if(tv1.getText().toString().length() != 0) {
+                presionadoOp = true;
                 operacion1 = tv1.getText().toString();
                 operario = "%";
 
@@ -166,6 +213,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
         b12.setOnClickListener(v -> {
+            if(presionado && !presionadoOp){
+                b1.callOnClick();
+                presionado = false;
+            }
             if(tv1.getText().toString().length() == 0){
                 tv1.setText("0.");
             }
@@ -220,6 +271,8 @@ public class MainActivity extends AppCompatActivity {
                     tv2.setText(operacion1.concat(" % ").concat(operacion2).concat(" = "));
                 }
                 tv1.setText(String.valueOf(resultado));
+                presionado = true;
+                presionadoOp = false;
             }
         });
     }
